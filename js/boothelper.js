@@ -235,6 +235,49 @@
                 $(this).remove();
             });
 
+        },
+
+        /*Html Popup with Defined markup*/
+        HtmlPopup: function (modal, options) {
+            "use strict";
+
+            var modalelm;
+
+            if (modal !== undefined && modal !== "") {
+
+                modalelm = $(modal);
+                try {
+
+
+                    if (options === undefined || options.backclick === undefined) {
+                        modalelm.modal();
+                    } else {
+
+                        if (options.backclick === true) {
+                            modalelm.modal();
+
+                        }
+
+                        if (options.backclick === false) {
+                            modalelm.modal({
+                                backdrop: "static",
+                                keyboard: false
+                            });
+
+                        }
+
+                    }
+
+
+                } catch (e) {
+                    console.log("BootHelper : HtmlPopup " + e);
+                }
+
+
+            } else {
+                console.log("BootHelper : HtmlPopup :: Please define the Modal");
+            }
+
         }
 
 
