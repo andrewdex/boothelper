@@ -163,12 +163,47 @@ $(function () {
         boot.Notify("#notifyWrapper").Info("Hello Info....");
     });
 
+
+/*dLoader */
+    $("#dLoaderEnable").click(function(){
+
+        boot.dLoader().Enable({
+            loadOn:"#wrapperLoader",
+            loaderText:"BootHelper dLoader..."
+        });
+
+
+
+    });
+
+    $("#dLoaderAjax").click(function(){
+
+        boot.dLoader().OnAjax({
+            loadOn:"#wrapperLoader",
+            loaderText:"BootHelper dLoader Ajax Loading..."
+        });
+
+        $.ajax();
+
+
+    });
+
+
+    $("#dLoaderDisable").click(function(){
+
+
+        boot.dLoader().Disable();
+
+
+    });
+
     /*Scroll Navigation*/
 
     $("#ScrollAlert").click(function () {
 
         $("#ScrollConfirm").removeClass("active");
         $("#ScrollNotify").removeClass("active");
+        $("#ScrolldLoader").removeClass("active");
 
         $(this).addClass("active");
         $('html,body').animate({
@@ -182,6 +217,7 @@ $(function () {
 
         $("#ScrollAlert").removeClass("active");
         $("#ScrollNotify").removeClass("active");
+        $("#ScrolldLoader").removeClass("active");
 
         $(this).addClass("active");
         $('html,body').animate({
@@ -195,6 +231,8 @@ $(function () {
 
         $("#ScrollAlert").removeClass("active");
         $("#ScrollConfirm").removeClass("active");
+        $("#ScrolldLoader").removeClass("active");
+
 
         $(this).addClass("active");
         $('html,body').animate({
@@ -202,6 +240,20 @@ $(function () {
         }, 1000);
 
     });
+
+    $("#ScrolldLoader").click(function () {
+
+        $("#ScrollAlert").removeClass("active");
+        $("#ScrollConfirm").removeClass("active");
+        $("#ScrollNotify").removeClass("active");
+
+        $(this).addClass("active");
+        $('html,body').animate({
+            scrollTop: $("#dLoaderBody").offset().top -52
+        }, 1000);
+
+    });
+
 
 
 

@@ -63,6 +63,7 @@
         <li role="presentation" class="active" id="ScrollAlert"><a href="#">Alert</a></li>
         <li id="ScrollConfirm" role="presentation"><a href="#">Confirm</a></li>
         <li role="presentation" id="ScrollNotify"><a href="#">Notify</a></li>
+        <li role="presentation" id="ScrolldLoader"><a href="#">dLoader</a></li>
     </ul>
 </div>
 
@@ -341,6 +342,92 @@
 
     </div>
 </div>
+
+
+<div class="panel panel-primary" id="dLoaderBody">
+    <div class="panel-heading">
+        <h3 class="panel-title"><strong>BootHelper dLoader </strong>: Parametrized Dynamic Ajax Loader
+        </h3>
+    </div>
+    <div class="panel-body">
+
+
+        <div>
+
+
+            <strong> Sample dLoader on all element wrapper : </strong>
+
+                            <pre class="brush :js">
+
+
+                                <!--timeout is used to disable the Loader-->
+
+                                <!--Enable on a defined element-->
+                                boot.dLoader().Enable({
+                                loadOn:"#wrapperLoader",
+                                loaderText:"BootHelper dLoader..."
+                                });
+
+                                <!--Disable when ever the content loads-->
+                                boot.dLoader().Disable();
+
+
+
+
+                            </pre>
+            <button class="btn btn-primary" id="dLoaderEnable">dLoader Enable</button>
+            <button class="btn btn-danger" id="dLoaderDisable">dLoader Disable</button>
+            <div class="col-md-12 margin-top-10">
+
+                <div class="well">
+
+                    <div  id="wrapperLoader">
+                        <h1>Sample Heading</h1>
+
+                        <p class="lead">tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+        <div class="margin-top-10">
+
+
+            <span></span><strong> dLoader On Ajax  : </strong>Enables Automatically on jQuery Ajax Start and Stops on ajax Complete method trigger.</span>
+
+                            <pre class="brush :js">
+
+
+                                <!--timeout is used to disable the Loader-->
+
+                                <!--Enable on a defined element-->
+                                boot.dLoader().OnAjax({
+                                    loadOn:"#wrapperLoader",
+                                    loaderText:"loader on ajax..."
+                                });
+
+
+
+
+
+
+                            </pre>
+
+            </div>
+        <button class="btn btn-primary" id="dLoaderAjax">dLoader Ajax Enable</button>
+
+        </div>
+
+    </div>
+</div>
+
 <div class="well">
 
     <div class="" id="heading">
