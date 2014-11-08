@@ -64,6 +64,7 @@
         <li id="ScrollConfirm" role="presentation"><a href="#">Confirm</a></li>
         <li role="presentation" id="ScrollNotify"><a href="#">Notify</a></li>
         <li role="presentation" id="ScrolldLoader"><a href="#">dLoader</a></li>
+        <li role="presentation" id="ScrollHtmlPopup"><a href="#">HtmlPopup</a></li>
     </ul>
 </div>
 
@@ -381,7 +382,7 @@
 
                 <div class="well">
 
-                    <div  id="wrapperLoader">
+                    <div id="wrapperLoader">
                         <h1>Sample Heading</h1>
 
                         <p class="lead">tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
@@ -393,14 +394,14 @@
             </div>
 
 
-
         </div>
 
 
         <div class="margin-top-10">
 
 
-            <span></span><strong> dLoader On Ajax  : </strong>Enables Automatically on jQuery Ajax Start and Stops on ajax Complete method trigger.</span>
+            <span></span><strong> dLoader On Ajax : </strong>Enables Automatically on jQuery Ajax Start and Stops on
+            ajax Complete method trigger.</span>
 
                             <pre class="brush :js">
 
@@ -420,51 +421,95 @@
 
                             </pre>
 
-            </div>
+        </div>
         <button class="btn btn-primary" id="dLoaderAjax">dLoader Ajax Enable</button>
 
+    </div>
+
+</div>
+
+
+<div class="panel panel-primary" id="HtmlPopupBody">
+    <div class="panel-heading">
+        <h3 class="panel-title"><strong>BootHelper HtmlPopup </strong>: Parametrized Dynamic Html Popup - with Buitin Bootstrap markup structure
+        </h3>
+    </div>
+    <div class="panel-body">
+
+        <div>
+            <span>Loads popups dynamically with a customized markup</span>
+                <strong>Html Markup :</strong>
+                            <pre class="brush :js">
+
+            <div class="modal fade modal1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button data-dismiss="modal" type="button" class="close"><span title="Close" class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
+                            <h3>Sample Popup Modal Tittle!</h3>
+                        </div>
+                        <div class="modal-body">
+                            <p>one fine body</p>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Ok
+                            </button>
+                        </div>
+                    </div>
+                    <! -- /.modal-content -->
+                </div>
+                <! -- /.modal-dialog -->
+            </div>
+
+
+                            </pre>
+
+            <strong>JS Code :</strong>
+                            <pre class="brush :js">
+                                <!--Html Popup boot method-->
+                                    boot.HtmlPopup(".modal1");
+                        </pre>
         </div>
-
+        <button class="btn btn-primary" id="HtmlPopup">Popup</button>
     </div>
 </div>
 
-<div class="well">
 
-    <div class="" id="heading">
-        <img src="images/boothelper.png">
+</div>
 
-        <h1>BootHelper v1.0</h1>
-        <h4>Bootstrap Based Helper FrontEnd Framework</h4>
 
-        <p>tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+</div>
 
-    </div>
+
+</div>
+
 
 </div>
 
 </div>
 
-<div class="col-md-12">
-    <div id="first" class="">
 
-        <div class="well">
+</div>
+<div class="modal fade modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button data-dismiss="modal" type="button" class="close"><span title="Close" class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
+                <h3>Sample Popup Modal Tittle!</h3>
+            </div>
+            <div class="modal-body">
+                <p>one fine body</p>
 
-            <h3> Test</h3>
-
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Ok
+                </button>
+            </div>
         </div>
-
+        <! -- /.modal-content -->
     </div>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-
+    <! -- /.modal-dialog -->
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

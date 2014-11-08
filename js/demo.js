@@ -197,12 +197,24 @@ $(function () {
 
     });
 
+
+    /*Html Popup*/
+    $("#HtmlPopup").click(function(){
+
+
+        boot.HtmlPopup(".modal1");
+
+
+    });
+
+
     /*Scroll Navigation*/
 
     $("#ScrollAlert").click(function () {
 
         $("#ScrollConfirm").removeClass("active");
         $("#ScrollNotify").removeClass("active");
+        $("#ScrollHtmlPopup").removeClass("active");
         $("#ScrolldLoader").removeClass("active");
 
         $(this).addClass("active");
@@ -217,6 +229,7 @@ $(function () {
 
         $("#ScrollAlert").removeClass("active");
         $("#ScrollNotify").removeClass("active");
+        $("#ScrollHtmlPopup").removeClass("active");
         $("#ScrolldLoader").removeClass("active");
 
         $(this).addClass("active");
@@ -232,6 +245,7 @@ $(function () {
         $("#ScrollAlert").removeClass("active");
         $("#ScrollConfirm").removeClass("active");
         $("#ScrolldLoader").removeClass("active");
+        $("#ScrollHtmlPopup").removeClass("active");
 
 
         $(this).addClass("active");
@@ -246,6 +260,7 @@ $(function () {
         $("#ScrollAlert").removeClass("active");
         $("#ScrollConfirm").removeClass("active");
         $("#ScrollNotify").removeClass("active");
+        $("#ScrollHtmlPopup").removeClass("active");
 
         $(this).addClass("active");
         $('html,body').animate({
@@ -254,6 +269,19 @@ $(function () {
 
     });
 
+    $("#ScrollHtmlPopup").click(function () {
+
+        $("#ScrollAlert").removeClass("active");
+        $("#ScrollConfirm").removeClass("active");
+        $("#ScrolldLoader").removeClass("active");
+        $("#ScrollNotify").removeClass("active");
+
+        $(this).addClass("active");
+        $('html,body').animate({
+            scrollTop: $("#HtmlPopupBody").offset().top -52
+        }, 1000);
+
+    });
 
 
 
