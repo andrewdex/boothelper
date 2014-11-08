@@ -9,5 +9,9 @@ $(function(){
         loaderText:"BootHelper dLoader..."
     });
 
+    boot.Notify("#first").Warning("Hello Warning....");
+    boot.Notify("#first").Error("Hello Error....");
+    boot.Notify("#first").Success("Hello Success....");
+
 });
 

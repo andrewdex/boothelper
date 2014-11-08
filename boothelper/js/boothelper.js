@@ -450,6 +450,79 @@
                 }
             }
 
+        },
+
+        /*Notify : Boothelper Notify can be used to display errors in a wrapper with built in bootstrap error panel styles*/
+        Notify: function (element) {
+
+            var element = $(element);
+
+            function DisplayWarning(warning) {
+
+                var alert = "<div class='alert alert-warning alert-dismissible fade in' role='alert'><button type='button' class='close' data-dismiss='alert'><span aria-hidden='true'>×</span><span class='sr-only'>Close</span></button>" + warning + "</div>";
+                if (element !== undefined || element !== "") {
+                    $(element).append(alert);
+
+                }
+
+            }
+
+            function DisplayError(error) {
+
+                var alert = "<div class='alert alert-danger alert-dismissible fade in' role='alert'><button type='button' class='close' data-dismiss='alert'><span aria-hidden='true'>×</span><span class='sr-only'>Close</span></button>" + error + "</div>";
+                if (element !== undefined || element !== "") {
+                    $(element).append(alert);
+                }
+
+            }
+
+            function DisplaySuccess(success) {
+
+                var alert = "<div class='alert alert-success alert-dismissible fade in' role='alert'><button type='button' class='close' data-dismiss='alert'><span aria-hidden='true'>×</span><span class='sr-only'>Close</span></button>" + success + "</div>";
+                if (element !== undefined || element !== "") {
+                    $(element).append(alert);
+                }
+
+            }
+
+
+            return{
+
+                Warning: function (warning) {
+
+                    if (warning !== undefined || warning !== "") {
+
+                        DisplayWarning(warning);
+
+                    }
+                },
+                Error: function (error) {
+
+
+                    if (error !== undefined || error !== "") {
+
+                        DisplayError(error);
+
+                    }
+
+
+                },
+                Success: function (success) {
+
+
+                    if (success !== undefined || success !== "") {
+
+                        DisplaySuccess(success);
+
+                    }
+
+
+                }
+
+
+            }
+
+
         }
 
 
