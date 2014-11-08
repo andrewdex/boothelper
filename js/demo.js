@@ -13,5 +13,12 @@ $(function(){
     boot.Notify("#first").Error("Hello Error....");
     boot.Notify("#first").Success("Hello Success....");
 
+
+    $("#sampleAlert").click(function(){
+
+        boot.Alert("I am the Alert","bootHelper Alert");
+
+    });
+
 });
 

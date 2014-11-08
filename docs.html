@@ -12,6 +12,12 @@
     <link href="boothelper/css/boothelper.css" rel="stylesheet">
     <!--BootHelper Demo CSS-->
     <link href="css/demo.css" rel="stylesheet">
+    <script type="text/javascript" src="js/shCore.js"></script>
+    <script type="text/javascript" src="js/shBrushJScript.js"></script>
+    <!--<script type="text/javascript" src="js/shBrushXml.js"></script>-->
+    <script type="text/javascript" src="js/shBrushPlain.js"></script>
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
+    <link type="text/css" rel="stylesheet" href="css/shCoreDjango.css"/>
 
 </head>
 <body>
@@ -50,12 +56,11 @@
 </div>
 
 
-
 <div class="docWrapper">
     <div class="col-md-12">
-        <div class="col-md-2 addBorder">
-            <ul class="nav nav-pills nav-stacked" role="tablist" style="max-width: 300px;">
-                <li role="presentation" class="active"><a href="#">Home</a></li>
+        <div class="col-md-2 addBorder margin-bottom-10">
+            <ul class="nav nav-pills nav-stacked" role="tablist">
+                <li role="presentation" class="active"><a href="#">Alert</a></li>
                 <li role="presentation"><a href="#">Profile</a></li>
                 <li role="presentation"><a href="#">Messages</a></li>
             </ul>
@@ -65,13 +70,57 @@
 
             <div class="col-md-12">
                 <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><strong>BootHelper Alert </strong>: Parametrized Dynamic Modal/Alert
+                                Dialog</h3>
+                        </div>
+                        <div class="panel-body">
 
+                            <div>
+
+                                <div class="alert alert-info" role="alert">
+                                    <strong> Sample Alert </strong>with tittle and message parameters.
+                                </div>
+                            <pre class="brush :js">
+
+                                <!--Simple Alert-->
+                                boot.Alert("I am the Alert","bootHelper Alert");
+
+
+                            </pre>
+                                <button class="btn btn-primary" id="sampleAlert">Sample Alert</button>
+
+
+                            </div>
+
+                            <div class="margin-top-10">
+
+                                <div class="alert alert-info" role="alert">
+                                    <strong> Sample Alert </strong>with tittle and message parameters.
+                                </div>
+                            <pre class="brush :js">
+
+                                <!--Simple Alert-->
+                                boot.Alert("I am the Alert","bootHelper Alert");
+
+
+                            </pre>
+                                <button class="btn btn-primary" id="sampleAlert">Sample Alert</button>
+
+
+                            </div>
+
+                        </div>
+                    </div>
                     <div class="well">
 
                         <div class="" id="heading">
                             <img src="images/boothelper.png">
+
                             <h1>BootHelper v1.0</h1>
                             <h4>Bootstrap Based Helper FrontEnd Framework</h4>
+
                             <p>tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
 
                         </div>
