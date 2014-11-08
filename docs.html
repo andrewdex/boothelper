@@ -62,7 +62,7 @@
     <ul class="nav nav-pills nav-stacked LeftSideBar" role="tablist">
         <li role="presentation" class="active" id="ScrollAlert"><a href="#">Alert</a></li>
         <li id="ScrollConfirm" role="presentation"><a href="#">Confirm</a></li>
-        <li role="presentation"><a href="#">Messages</a></li>
+        <li role="presentation" id="ScrollNotify"><a href="#">Notify</a></li>
     </ul>
 </div>
 
@@ -288,6 +288,48 @@
 
 
         </div>
+
+    </div>
+</div>
+
+<div class="panel panel-primary" id="notifyBody">
+    <div class="panel-heading">
+        <h3 class="panel-title"><strong>BootHelper Notify </strong>: Parametrized Notification Alerts with bootstrap
+            styles.
+        </h3>
+    </div>
+    <div class="panel-body">
+
+
+        <div>
+
+
+            <strong> Sample Notify</strong> with semantic parameter usage.
+                            <pre class="brush :js">
+                            <!--Notify : Warning-->
+                            boot.Notify("#notifyWrapper").Warning("Hello Warning....");
+
+                            </pre>
+            <button class="btn btn-warning" id="NotifyWarning">Notify Warning</button>
+
+
+                                    <pre class="brush :js">
+                            <!--Notify : Warning-->
+                            boot.Notify("#notifyWrapper").Success("Hello Success....");
+
+                            </pre>
+            <button class="btn btn-success" id="NotifySuccess">Notify Success</button>
+
+                           <pre class="brush :js">
+                            <!--Notify : Warning-->
+                            boot.Notify("#notifyWrapper").Error("Hello Error....");
+
+                            </pre>
+            <button class="btn btn-danger" id="NotifyError">Notify Error</button>
+            <div id="notifyWrapper" class="margin-top-10"></div>
+
+        </div>
+
 
     </div>
 </div>

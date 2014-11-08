@@ -9,9 +9,7 @@ $(function () {
 //        loaderText:"BootHelper dLoader..."
 //    });
 
-    boot.Notify("#first").Warning("Hello Warning....");
-    boot.Notify("#first").Error("Hello Error....");
-    boot.Notify("#first").Success("Hello Success....");
+
 
 
     $("#sampleAlert").click(function () {
@@ -141,13 +139,31 @@ $(function () {
     });
 
 
+    /*Notify Component*/
 
+
+    $("#NotifyWarning").click(function(){
+
+        boot.Notify("#notifyWrapper").Warning("Hello Warning....");
+    });
+
+
+    $("#NotifySuccess").click(function(){
+
+        boot.Notify("#notifyWrapper").Success("Hello Success....");
+    });
+
+    $("#NotifyError").click(function(){
+
+        boot.Notify("#notifyWrapper").Error("Hello Error....");
+    });
 
     /*Scroll Navigation*/
 
     $("#ScrollAlert").click(function () {
 
         $("#ScrollConfirm").removeClass("active");
+        $("#ScrollNotify").removeClass("active");
 
         $(this).addClass("active");
         $('html,body').animate({
@@ -160,6 +176,7 @@ $(function () {
     $("#ScrollConfirm").click(function () {
 
         $("#ScrollAlert").removeClass("active");
+        $("#ScrollNotify").removeClass("active");
 
         $(this).addClass("active");
         $('html,body').animate({
@@ -167,6 +184,20 @@ $(function () {
         }, 1000);
 
     });
+
+
+    $("#ScrollNotify").click(function () {
+
+        $("#ScrollAlert").removeClass("active");
+        $("#ScrollConfirm").removeClass("active");
+
+        $(this).addClass("active");
+        $('html,body').animate({
+            scrollTop: $("#notifyBody").offset().top -52
+        }, 1000);
+
+    });
+
 
 
 

@@ -58,7 +58,7 @@ body{margin-top: 50px;}
 
 @media(max-width: 768px) {
     .nav .nav-pills .nav-stacked{max-width: 100% !important;}
-    
+
     .LeftSideBar{position: inherit;width:100%;}
 
 }
