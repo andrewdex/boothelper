@@ -60,8 +60,8 @@
     <div class="col-md-12">
         <div class="col-md-2 addBorder margin-bottom-10">
             <ul class="nav nav-pills nav-stacked" role="tablist">
-                <li role="presentation" class="active"><a href="#">Alert</a></li>
-                <li role="presentation"><a href="#">Profile</a></li>
+                <li role="presentation" class="active" id="ScrollAlert"><a href="#">Alert</a></li>
+                <li  id="ScrollConfirm" role="presentation"><a href="#">Confirm</a></li>
                 <li role="presentation"><a href="#">Messages</a></li>
             </ul>
         </div>
@@ -70,7 +70,7 @@
 
             <div class="col-md-12">
                 <div class="col-md-12">
-                    <div class="panel panel-primary">
+                    <div class="panel panel-primary" id="alertBody">
                         <div class="panel-heading">
                             <h3 class="panel-title"><strong>BootHelper Alert </strong>: Parametrized Dynamic Modal/Alert
                                 Dialog</h3>
@@ -79,7 +79,7 @@
 
                             <div>
 
-                                
+
                                 <strong> Sample Alert </strong>with tittle and message parameters.
 
                             <pre class="brush :js">
@@ -113,7 +113,7 @@
                             </pre>
                                 <span>You can define if the Alert shoul closed with a backclick on the background or not. by default this is set to true</span>
 
-                                <button class="btn btn-primary" id="AlertBackclick">Alert Blackclick</button>
+                                <button class="btn btn-primary" id="AlertBackclick">Alert backclick</button>
 
 
                             </div>
@@ -141,7 +141,7 @@
                                             <pre class="brush :js">
 
                                 <!--Alert with Success Type-->
-                                boot.Alert("I am the Success Alert","bootHelper Alert",{
+                                boot.Alert("I am the Warning Alert","bootHelper Alert",{
                                     type:'warning',
                                     backclick:true
                                 });
@@ -152,9 +152,50 @@
 
                                 <button class="btn btn-warning" id="AlertWarning">Alert Warning</button>
 
+                                <pre class="brush :js">
+
+                                <!--Alert with Success Type-->
+                                boot.Alert("I am the Info Alert","bootHelper Alert",{
+                                    type:'info',
+                                    backclick:true
+                                });
+
+
+                            </pre>
+                                <span>This will pops up an alert with bootstrap default info color alert style</span>
+
+                                <button class="btn btn-info" id="AlertInfo">Alert Info</button>
+
+
+
+                                            <pre class="brush :js">
+
+                                <!--Alert with Success Type-->
+                                boot.Alert("I am the Error Alert","bootHelper Alert",{
+                                    type:'error',
+                                    backclick:true
+                                });
+
+
+                            </pre>
+                                <span>This will pops up an alert with bootstrap default error color alert style</span>
+
+                                <button class="btn btn-danger" id="AlertError">Alert Error</button>
 
 
                             </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="panel panel-primary" id="confirmBody">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><strong>BootHelper Confirm </strong>: Parametrized Dynamic
+                                Modal/Confirm
+                                Dialog</h3>
+                        </div>
+                        <div class="panel-body">
 
 
                         </div>

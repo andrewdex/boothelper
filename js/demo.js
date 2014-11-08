@@ -53,6 +53,58 @@ $(function () {
 
     });
 
+    $("#AlertInfo").click(function () {
+
+        <!--Alert with Success Type-->
+        boot.Alert("I am the info Alert", "bootHelper Alert", {
+            type: 'info',
+            backclick: true
+        });
+
+
+    });
+
+    $("#AlertError").click(function () {
+
+        <!--Alert with Success Type-->
+        boot.Alert("I am the Error Alert", "bootHelper Alert", {
+            type: 'error',
+            backclick: true
+        });
+
+
+    });
+
+
+
+    /*Scroll Navigation*/
+
+    $("#ScrollAlert").click(function () {
+
+        $("#ScrollConfirm").removeClass("active");
+
+        $(this).addClass("active");
+        $('html,body').animate({
+            scrollTop: $("#alertBody").offset().top -52
+        }, 1000);
+
+    });
+
+
+    $("#ScrollConfirm").click(function () {
+
+        $("#ScrollAlert").removeClass("active");
+
+        $(this).addClass("active");
+        $('html,body').animate({
+            scrollTop: $("#confirmBody").offset().top -52
+        }, 1000);
+
+    });
+
+
+
+
 
 });
 
