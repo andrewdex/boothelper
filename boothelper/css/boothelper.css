@@ -7,7 +7,7 @@
 
 /*dLoader Styles*/
 .dLoader {
-    z-index: 2000;
+    z-index: 1000;
     position: absolute;
     top: 0;
     left: 0;
@@ -22,7 +22,7 @@
 
 .dLoader-loading {
     background: url("images/dLoader.GIF");
-    z-index: 2000;
+    z-index: 1000;
     position: absolute;
     left: 50%;
     top: 35%;
@@ -34,7 +34,7 @@
 }
 
 .dLoader-text {
-    z-index: 2000;
+    z-index: 1000;
     position: absolute;
     left: 50%;
     top: 44%;

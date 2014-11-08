@@ -1,0 +1,48 @@
+/*BootHelper CSS Demo*/
+
+body{margin-top: 50px;}
+
+/*Bootstrap Overwrites*/
+.navbar-default {
+
+    border-color: #3A80FF;
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    background: rgba(255,255,255,.95);
+}
+.navbar-default .navbar-brand {
+    color: #7b8386;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #7b8386;
+}
+
+
+/*Add Border*/
+.addBorder{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 10px;
+    border-color: rgb(231, 231, 231);
+}
+
+.bh-docs-masthead, .bh-docs-masthead {
+    position: relative;
+    padding: 30px 15px;
+    color: #000000;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0,0,0,.1);
+    background-color: #50b1ff ;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#50b1ff ),to(#50b1ff ));
+    background-image: -webkit-linear-gradient(top,#50b1ff  0,#50b1ff  100%);
+    background-image: -o-linear-gradient(top,#50b1ff  0,#50b1ff  100%);
+    background-image: linear-gradient(to bottom,#50b1ff  0,#50b1ff  100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#50b1ff ', endColorstr='#50b1ff ', GradientType=0);
+    background-repeat: repeat-x;
+}
+
+.bgWhite{background: #ffffff}
+.bgBlack{background: #3A4552;}
+.bgBlack:hover{background: #244162;}
+.bgBlack:focus{background: #244162;}
+.fontWhite{color:#ffffff;}
