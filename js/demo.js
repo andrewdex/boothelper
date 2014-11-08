@@ -158,6 +158,11 @@ $(function () {
         boot.Notify("#notifyWrapper").Error("Hello Error....");
     });
 
+    $("#NotifyInfo").click(function(){
+
+        boot.Notify("#notifyWrapper").Info("Hello Info....");
+    });
+
     /*Scroll Navigation*/
 
     $("#ScrollAlert").click(function () {

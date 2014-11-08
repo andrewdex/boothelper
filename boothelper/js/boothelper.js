@@ -485,6 +485,15 @@
 
             }
 
+            function DisplayInfo(info) {
+
+                var alert = "<div class='alert alert-info alert-dismissible fade in' role='alert'><button type='button' class='close' data-dismiss='alert'><span aria-hidden='true'>×</span><span class='sr-only'>Close</span></button>" + info + "</div>";
+                if (element !== undefined || element !== "") {
+                    $(element).append(alert);
+                }
+
+            }
+
 
             return{
 
@@ -517,7 +526,19 @@
                     }
 
 
+                },
+                Info: function (info) {
+
+
+                    if (info !== undefined || info !== "") {
+
+                        DisplayInfo(info);
+
+                    }
+
+
                 }
+
 
 
             }
