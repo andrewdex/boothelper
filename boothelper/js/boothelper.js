@@ -19,7 +19,7 @@
         config: {
 
             version: "1.0",
-            author:"Dilusha Gonagala"
+            author: "Dilusha Gonagala"
         },
 
         /*Tools*/
@@ -369,7 +369,7 @@
             var LoadingText = "Loading...";
             var LoadOn = "body";
 
-            function privateInit(params) {
+            function Init(params) {
 
                 if (params && params.loaderText !== undefined) {
                     LoadingText = params.loaderText;
@@ -404,32 +404,13 @@
                 if (elm && elm.loadOn !== undefined) {
                     LoadOn = elm.loadOn;
                 }
-                var dynheight = $(LoadOn).height();
-
-                var dynheightOuter = $(LoadOn).outerHeight();
-
-                var loadTop = dynheightOuter/2 ;
-                var loadtextTop = (dynheightOuter/2) + 70;
-
-
-                var loadOnPossition = $(LoadOn).offset();
-
-                var loadPre = dynheightOuter;
-                var loadPreTop = (dynheightOuter/10);
-
-
-//               var dLoaderStyle = "<style type='text/css'> .dLoader{z-index:2000;position:absolute;top:0;left:0;-moz-opacity:.9;opacity:.9;filter:alpha(opacity=90);background-color: #FFFFFF;width: 100%;height: 100%;zoom: 1} </style>";
-//               var dLoaderLoadingStyle = "<style type='text/css'>.dLoader-loading{background: url('boothelper/images/dLoader.GIF');z-index:2000;position: absolute;left: 50%;top: 35%;margin-left: -32px;margin-top: -32px;display: block;width: 64px;height: 64px;}</style>";
-
-
-
-                var element = $(LoadOn), height = $(window).height(), preloaderTop = (height / 2), preLoaderTextTop = (height / 2) + 80;
-                $(element).append("<div class='dLoader'></div><div class='dLoader-loading' style='top:"+loadTop+"px'></div><div class='dLoader-text' style='top:"+loadtextTop+"px'>" + LoadingText + "</div>");
-                element.css({"overflow-x":"hidden","overflow-y":"hidden"});
+                var dynheight = $(LoadOn).height(), dynheightOuter = $(LoadOn).outerHeight(), loadTop = dynheightOuter / 2 , loadtextTop = (dynheightOuter / 2) + 70, element = $(LoadOn), height = $(window).height(), preloaderTop = (height / 2), preLoaderTextTop = (height / 2) + 80;
+                $(element).append("<div class='dLoader'></div><div class='dLoader-loading' style='top:" + loadTop + "px'></div><div class='dLoader-text' style='top:" + loadtextTop + "px'>" + LoadingText + "</div>");
+                element.css({"overflow-x": "hidden", "overflow-y": "hidden"});
 
                 /*Set preLoader Loading Dynamic Top*/
 
-                if(LoadOn == "html" || LoadOn == "body"){
+                if (LoadOn == "html" || LoadOn == "body") {
 
                     $(".dLoader-loading").css({
                         "top": preloaderTop
@@ -444,8 +425,6 @@
                 }
 
 
-
-
             };
             /*Disable Pre-Loader*/
             function loadDisable(elm) {
@@ -457,7 +436,7 @@
 
             return{
                 OnAjax: function (param) {
-                    privateInit(param);
+                    Init(param);
 
                 },
                 Enable: function (elm) {
