@@ -79,13 +79,15 @@
 
                             <div>
 
-                                <div class="alert alert-info" role="alert">
-                                    <strong> Sample Alert </strong>with tittle and message parameters.
-                                </div>
+                                
+                                <strong> Sample Alert </strong>with tittle and message parameters.
+
                             <pre class="brush :js">
 
                                 <!--Simple Alert-->
                                 boot.Alert("I am the Alert","bootHelper Alert");
+
+
 
 
                             </pre>
@@ -96,20 +98,64 @@
 
                             <div class="margin-top-10">
 
-                                <div class="alert alert-info" role="alert">
-                                    <strong> Sample Alert </strong>with tittle and message parameters.
-                                </div>
+
+                                <strong> Sample Alert </strong>with backclick options.
+
                             <pre class="brush :js">
 
-                                <!--Simple Alert-->
-                                boot.Alert("I am the Alert","bootHelper Alert");
+                                <!--Alert with Options-->
+                                boot.Alert("I am the Alert","bootHelper Alert",{
+
+                                    backclick:false
+                                });
 
 
                             </pre>
-                                <button class="btn btn-primary" id="sampleAlert">Sample Alert</button>
+                                <span>You can define if the Alert shoul closed with a backclick on the background or not. by default this is set to true</span>
+
+                                <button class="btn btn-primary" id="AlertBackclick">Alert Blackclick</button>
 
 
                             </div>
+
+                            <div class="margin-top-10">
+
+
+                                <strong> Sample Alert </strong>with type option parameters.
+
+                            <pre class="brush :js">
+
+                                <!--Alert with Success Type-->
+                                boot.Alert("I am the Success Alert","bootHelper Alert",{
+                                    type:'success',
+                                    backclick:true
+                                });
+
+
+                            </pre>
+                                <span>This will pops up an alert with bootstrap default greenify alert style</span>
+
+                                <button class="btn btn-success" id="AlertSuccess">Alert Success</button>
+
+
+                                            <pre class="brush :js">
+
+                                <!--Alert with Success Type-->
+                                boot.Alert("I am the Success Alert","bootHelper Alert",{
+                                    type:'warning',
+                                    backclick:true
+                                });
+
+
+                            </pre>
+                                <span>This will pops up an alert with bootstrap default yellow color alert style</span>
+
+                                <button class="btn btn-warning" id="AlertWarning">Alert Warning</button>
+
+
+
+                            </div>
+
 
                         </div>
                     </div>
