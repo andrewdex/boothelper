@@ -278,6 +278,24 @@
                 console.log("BootHelper : HtmlPopup :: Please define the Modal");
             }
 
+        },
+        /*SetAutoheight :: Set MaxHeight to set of elements from the Max height*/
+        SetMaxHeight: function (element) {
+
+            "use strict";
+
+            var elementObj = $(element),
+                heights, maxHeight;
+
+            heights = $(elementObj).map(function () {
+                return $(this).height();
+            }).get();
+            maxHeight = Math.max.apply(null, heights);
+
+            $(elementObj).css({
+                "height": maxHeight
+            });
+
         }
 
 
