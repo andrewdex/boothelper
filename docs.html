@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BootHelper FrontEnd Framework</title>
+
+    <link rel="icon" type="image/png" href="images/boothelper.png">
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--BootHelper CSS-->
+    <link href="boothelper/css/boothelper.css" rel="stylesheet">
+    <!--BootHelper Demo CSS-->
+    <link href="css/demo.css" rel="stylesheet">
+    <script type="text/javascript" src="js/shCore.js"></script>
+    <script type="text/javascript" src="js/shBrushJScript.js"></script>
+    <!--<script type="text/javascript" src="js/shBrushXml.js"></script>-->
+    <script type="text/javascript" src="js/shBrushPlain.js"></script>
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
+    <link type="text/css" rel="stylesheet" href="css/shCoreDjango.css"/>
+
+</head>
+<body>
+<a href="https://github.com/andrewdex/boothelper"><img style="position: fixed; top: 0; right: 0; border: 0;z-index:3000" src="images/fork.png" alt="Fork me on GitHub"></a>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">BootHelper</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class=""><a href="index.html">Overview</a></li>
+                <li class=""><a href="started.html">Getting Started</a></li>
+                <li class="active"><a href="docs.html">Documentation</a></li>
+                <li class=""><a href="http://andrewdex.github.io/" target="_blank">About</a></li>
+
+            </ul>
+
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</div>
+
+
+<div class="docWrapper">
+<div class="col-md-12">
+<div class="col-md-2 margin-bottom-10">
+    <ul class="nav nav-pills nav-stacked LeftSideBar" role="tablist">
+        <li role="presentation" class="active" id="ScrollAlert"><a href="#">Alert</a></li>
+        <li id="ScrollConfirm" role="presentation"><a href="#">Confirm</a></li>
+        <li role="presentation" id="ScrollNotify"><a href="#">Notify</a></li>
+        <li role="presentation" id="ScrolldLoader"><a href="#">dLoader</a></li>
+        <li role="presentation" id="ScrollHtmlPopup"><a href="#">HtmlPopup</a></li>
+    </ul>
+</div>
+
+<div class="col-md-10">
+
+<div class="col-md-12">
+<div class="col-md-12">
+<div class="panel panel-primary" id="alertBody">
+    <div class="panel-heading">
+        <h3 class="panel-title"><strong>BootHelper Alert </strong>: Parametrized Dynamic Modal/Alert
+            Dialog</h3>
+    </div>
+    <div class="panel-body">
+
+        <div>
+
+
+            <strong> Sample Alert </strong>with tittle and message parameters.
+
+                            <pre class="brush :js">
+
+                                <!--Simple Alert-->
+                                boot.Alert("I am the Alert","bootHelper Alert");
+
+
+
+
+                            </pre>
+            <button class="btn btn-primary" id="sampleAlert">Sample Alert</button>
+
+
+        </div>
+
+        <div class="margin-top-10">
+
+
+            <strong> Sample Alert </strong>with backclick options.
+
+                            <pre class="brush :js">
+
+                                <!--Alert with Options-->
+                                boot.Alert("I am the Alert","bootHelper Alert",{
+
+                                    backclick:false
+                                });
+
+
+                            </pre>
+            <span>You can define if the Alert shoul closed with a backclick on the background or not. by default this is set to true</span>
+
+            <button class="btn btn-primary" id="AlertBackclick">Alert backclick</button>
+
+
+        </div>
+
+        <div class="margin-top-10">
+
+
+            <strong> Sample Alert </strong>with type option parameters.
+
+                            <pre class="brush :js">
+
+                                <!--Alert with Success Type-->
+                                boot.Alert("I am the Success Alert","bootHelper Alert",{
+                                    type:'success',
+                                    backclick:true
+                                });
+
+
+                            </pre>
+            <span>This will pops up an alert with bootstrap default greenify alert style</span>
+
+            <button class="btn btn-success" id="AlertSuccess">Alert Success</button>
+
+
+                                            <pre class="brush :js">
+
+                                <!--Alert with Success Type-->
+                                boot.Alert("I am the Warning Alert","bootHelper Alert",{
+                                    type:'warning',
+                                    backclick:true
+                                });
+
+
+                            </pre>
+            <span>This will pops up an alert with bootstrap default yellow color alert style</span>
+
+            <button class="btn btn-warning" id="AlertWarning">Alert Warning</button>
+
+                                <pre class="brush :js">
+
+                                <!--Alert with Success Type-->
+                                boot.Alert("I am the Info Alert","bootHelper Alert",{
+                                    type:'info',
+                                    backclick:true
+                                });
+
+
+                            </pre>
+            <span>This will pops up an alert with bootstrap default info color alert style</span>
+
+            <button class="btn btn-info" id="AlertInfo">Alert Info</button>
+
+
+
+                                            <pre class="brush :js">
+
+                                <!--Alert with Success Type-->
+                                boot.Alert("I am the Error Alert","bootHelper Alert",{
+                                    type:'error',
+                                    backclick:true
+                                });
+
+
+                            </pre>
+            <span>This will pops up an alert with bootstrap default error color alert style</span>
+
+            <button class="btn btn-danger" id="AlertError">Alert Error</button>
+
+
+        </div>
+
+
+    </div>
+</div>
+
+<div class="panel panel-primary" id="confirmBody">
+    <div class="panel-heading">
+        <h3 class="panel-title"><strong>BootHelper Confirm </strong>: Parametrized Dynamic
+            Modal/Confirm with Result Callbacks
+        </h3>
+    </div>
+    <div class="panel-body">
+
+        <div>
+
+
+            <strong> Sample Confirm</strong> with tittle and message parameters. And true/false result callback
+            function.
+
+                            <pre class="brush :js">
+
+                                <!--Simple Confirm-->
+                                boot.Confirm("I am the Confirm","bootHelper Alert",function(result){
+                                    if(result){
+                                       boot.Alert("You Have Clicked Yes","BootHelper Confirm");
+                                    }else{
+                                        boot.Alert("You Have Clicked No","BootHelper Confirm");
+
+                                    }
+                                });
+
+
+
+
+                            </pre>
+            <button class="btn btn-primary" id="sampleConfirm">Sample Confirm</button>
+
+
+        </div>
+
+        <div class="margin-top-10">
+
+
+            <strong> Sample Confirm Option Parameter : </strong> with tittle and message parameters. And true/false
+            result callback functions with option parameters.
+
+                            <pre class="brush :js">
+
+                                <!--Simple Confirm with options-->
+                                boot.Confirm("I am the Confirm","bootHelper Alert",function(result){
+                                    if(result){
+                                       boot.Alert("You Have Clicked Yes","BootHelper Confirm");
+                                    }else{
+                                        boot.Alert("You Have Clicked No","BootHelper Confirm");
+                                    }
+                                },
+                                {
+
+                                backclick:false
+                                }
+                                );
+
+
+
+
+                            </pre>
+            <button class="btn btn-primary" id="ConfirmOptions">Sample Confirm with Options</button>
+
+
+        </div>
+
+        <div class="margin-top-10">
+
+
+            <strong> Sample Nested Confirms : </strong> with tittle and message parameters. And true/false result
+            callback functions with option parameters.
+
+                            <pre class="brush :js">
+
+                                <!--Simple Confirm with options-->
+                                boot.Confirm("I am the Confirm","bootHelper Alert",function(result){
+                                    if(result){
+                                       <!--nested Confirm on yes click-->
+                                        boot.Confirm("I am the Nested Confirm","bootHelper Alert",function(results){
+                                                if(results){
+                                                    boot.Alert("You Have Clicked nested Yes","BootHelper Alert");
+                                                }else{
+                                                     boot.Alert("You Have Clicked nested No","BootHelper Alert");
+                                                }
+                                        });
+                                    }else{
+                                        boot.Alert("You Have Clicked No","BootHelper Confirm");
+                                    }
+                                },
+                                {
+
+                                backclick:false
+                                });
+
+                            </pre>
+            <button class="btn btn-warning" id="ConfirmNested">Nested Confirms</button>
+
+
+        </div>
+
+    </div>
+</div>
+
+<div class="panel panel-primary" id="notifyBody">
+    <div class="panel-heading">
+        <h3 class="panel-title"><strong>BootHelper Notify </strong>: Parametrized Notification Alerts with bootstrap
+            styles.
+        </h3>
+    </div>
+    <div class="panel-body">
+
+
+        <div>
+
+
+            <strong> Sample Notify</strong> with semantic parameter usage.
+                            <pre class="brush :js">
+                            <!--Notify : Warning-->
+                            boot.Notify("#notifyWrapper").Warning("Hello Warning....");
+
+                            </pre>
+            <button class="btn btn-warning" id="NotifyWarning">Notify Warning</button>
+
+
+                                    <pre class="brush :js">
+                            <!--Notify : Warning-->
+                            boot.Notify("#notifyWrapper").Success("Hello Success....");
+
+                            </pre>
+            <button class="btn btn-success" id="NotifySuccess">Notify Success</button>
+
+                           <pre class="brush :js">
+                            <!--Notify : Warning-->
+                            boot.Notify("#notifyWrapper").Error("Hello Error....");
+
+                            </pre>
+            <button class="btn btn-danger" id="NotifyError">Notify Error</button>
+
+              <pre class="brush :js">
+                            <!--Notify : Warning-->
+                            boot.Notify("#notifyWrapper").Info("Hello Info....");
+
+                            </pre>
+            <button class="btn btn-info" id="NotifyInfo">Notify Info</button>
+
+            <div id="notifyWrapper" class="margin-top-10"></div>
+
+        </div>
+
+
+    </div>
+</div>
+
+
+<div class="panel panel-primary" id="dLoaderBody">
+    <div class="panel-heading">
+        <h3 class="panel-title"><strong>BootHelper dLoader </strong>: Parametrized Dynamic Ajax Loader
+        </h3>
+    </div>
+    <div class="panel-body">
+
+
+        <div>
+
+
+            <strong> Sample dLoader on all element wrapper : </strong>
+
+                            <pre class="brush :js">
+
+
+                                <!--timeout is used to disable the Loader-->
+
+                                <!--Enable on a defined element-->
+                                boot.dLoader().Enable({
+                                loadOn:"#wrapperLoader",
+                                loaderText:"BootHelper dLoader..."
+                                });
+
+                                <!--Disable when ever the content loads-->
+                                boot.dLoader().Disable();
+
+
+
+
+                            </pre>
+            <button class="btn btn-primary" id="dLoaderEnable">dLoader Enable</button>
+            <button class="btn btn-danger" id="dLoaderDisable">dLoader Disable</button>
+            <div class="col-md-12 margin-top-10">
+
+                <div class="well">
+
+                    <div id="wrapperLoader">
+                        <h1>Sample Heading</h1>
+
+                        <p class="lead">tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="margin-top-10">
+
+
+            <span></span><strong> dLoader On Ajax : </strong>Enables Automatically on jQuery Ajax Start and Stops on
+            ajax Complete method trigger.</span>
+
+                            <pre class="brush :js">
+
+
+                                <!--timeout is used to disable the Loader-->
+
+                                <!--Enable on a defined element-->
+                                boot.dLoader().OnAjax({
+                                    loadOn:"#wrapperLoader",
+                                    loaderText:"loader on ajax..."
+                                });
+
+
+
+
+
+
+                            </pre>
+
+        </div>
+        <button class="btn btn-primary" id="dLoaderAjax">dLoader Ajax Enable</button>
+
+    </div>
+
+</div>
+
+
+<div class="panel panel-primary" id="HtmlPopupBody">
+    <div class="panel-heading">
+        <h3 class="panel-title"><strong>BootHelper HtmlPopup </strong>: Parametrized Dynamic Html Popup - with Buitin Bootstrap markup structure
+        </h3>
+    </div>
+    <div class="panel-body">
+
+        <div>
+            <span>Loads popups dynamically with a customized markup</span>
+                <strong>Html Markup :</strong>
+                            <pre class="brush :js">
+
+            <div class="modal fade modal1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button data-dismiss="modal" type="button" class="close"><span title="Close" class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
+                            <h3>Sample Popup Modal Tittle!</h3>
+                        </div>
+                        <div class="modal-body">
+                            <p>one fine body</p>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Ok
+                            </button>
+                        </div>
+                    </div>
+                    <! -- /.modal-content -->
+                </div>
+                <! -- /.modal-dialog -->
+            </div>
+
+
+                            </pre>
+
+            <strong>JS Code :</strong>
+                            <pre class="brush :js">
+                                <!--Html Popup boot method-->
+                                    boot.HtmlPopup(".modal1");
+                        </pre>
+        </div>
+        <button class="btn btn-primary" id="HtmlPopup">Popup</button>
+    </div>
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+
+</div>
+<div class="modal fade modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button data-dismiss="modal" type="button" class="close"><span title="Close" class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
+                <h3>Sample Popup Modal Tittle!</h3>
+            </div>
+            <div class="modal-body">
+                <p>one fine body</p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Ok
+                </button>
+            </div>
+        </div>
+        <! -- /.modal-content -->
+    </div>
+    <! -- /.modal-dialog -->
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.1.11.0.min.js" type="text/javascript"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<!-- BootHelper JS Framework-->
+<script src="boothelper/js/boothelper.js" type="text/javascript"></script>
+<script src="js/demo.js" type="text/javascript"></script>
+
+</body>
+</html>

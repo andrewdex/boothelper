@@ -1,0 +1,64 @@
+/*BootHelper CSS Demo*/
+
+body{margin-top: 50px;}
+
+/*Bootstrap Overwrites*/
+.navbar-default {
+
+    border-color: #3A80FF;
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    background: rgba(255,255,255,.95);
+}
+.navbar-default .navbar-brand {
+    color: #7b8386;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #7b8386;
+}
+
+
+/*Add Border*/
+.LeftSideBar{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 10px;
+    border-color: rgb(231, 231, 231);
+    display: block;
+    position: fixed;
+    width: 18%;
+}
+
+.bh-docs-masthead, .bh-docs-masthead {
+    position: relative;
+    padding: 30px 15px;
+    color: #000000;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0,0,0,.1);
+    background-color: #208BE2 ;
+
+    background-repeat: repeat-x;
+}
+
+.bgWhite{background: #ffffff}
+.bgBlack{background: #3A4552;}
+.bgBlack:hover{background: #244162;}
+.bgBlack:focus{background: #244162;}
+.fontWhite{color:#ffffff;}
+.fontWhite:hover{color:#ffffff;}
+.fontWhite:focus{color:#ffffff;}
+
+
+.docWrapper{margin-top: 55px;}
+
+.textEditor{height: 560px;background: rgb(4, 45, 4);color:rgb(25, 224, 224);width:100%}
+
+.margin-top-10{margin-top: 10px;}
+.margin-bottom-10{margin-bottom: 10px;}
+
+@media(max-width: 768px) {
+    .nav .nav-pills .nav-stacked{max-width: 100% !important;}
+
+    .LeftSideBar{position: inherit;width:100%;}
+
+}
