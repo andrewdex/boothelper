@@ -18,7 +18,8 @@
         /*BootHelper Main Config Global*/
         config: {
 
-            val: "Hello"
+            version: "1.0",
+            author:"Dilusha Gonagala"
         },
 
         /*Tools*/
@@ -139,6 +140,7 @@
 
 
         },
+
         /*Parametrized Confirm Dialog*/
         Confirm: function (msg, tittle, callback, options) {
             "use strict";
@@ -279,7 +281,8 @@
             }
 
         },
-        /*SetAutoheight :: Set MaxHeight to set of elements from the Max height*/
+
+        /*SetMaxHeight :: Set MaxHeight to set of elements from the Max height*/
         SetMaxHeight: function (element) {
 
             "use strict";
@@ -295,6 +298,67 @@
             $(elementObj).css({
                 "height": maxHeight
             });
+
+        },
+
+        /*ThisBrowser :: Browser Detection Component : Beta ( Not Recommended, but for still wanna users.. :)  )*/
+        ThisBrowser: function () {
+            "use strict";
+            var browser = {},
+                sUsrAg = navigator.userAgent;
+
+            if (sUsrAg.indexOf("Chrome") > -1) {
+                browser.name = "Chrome";
+                browser.version = navigator.appVersion;
+            } else if (sUsrAg.indexOf("Safari") > -1) {
+                browser.name = "Safari";
+                browser.version = navigator.appVersion;
+            } else if (sUsrAg.indexOf("Opera") > -1) {
+                browser.name = "Opera";
+                browser.version = navigator.appVersion;
+            } else if (sUsrAg.indexOf("Firefox") > -1) {
+                browser.name = "Firefox";
+                browser.version = navigator.appVersion;
+            } else if (sUsrAg.indexOf("MSIE") > -1) {
+                browser.name = "IE";
+            }
+
+            var ie9 = document.createElement("ie9"),
+                ie8 = document.createElement("ie8"),
+                ie7 = document.createElement("ie7"),
+                ie10 = document.createElement("ie10"),
+                ie11 = document.createElement("ie11");
+
+            ie7.innerHTML = "<!--[if IE 7]><i></i><![endif]-->";
+            ie8.innerHTML = "<!--[if IE 8]><i></i><![endif]-->";
+            ie9.innerHTML = "<!--[if IE 9]><i></i><![endif]-->";
+            ie10.innerHTML = "<!--[if IE 10]><i></i><![endif]-->";
+            ie11.innerHTML = "<!--[if IE 11]><i></i><![endif]-->";
+
+            var isIe7 = (ie7.getElementsByTagName("i").length == 1);
+            var isIe8 = (ie8.getElementsByTagName("i").length == 1);
+            var isIe9 = (ie9.getElementsByTagName("i").length == 1);
+            var isIe10 = (ie10.getElementsByTagName("i").length == 1);
+            var isIe11 = (ie11.getElementsByTagName("i").length == 1);
+
+            if (isIe7) {
+                browser.version = "IE7";
+            }
+            if (isIe8) {
+                browser.version = "IE8";
+            }
+            if (isIe9) {
+                browser.version = "IE9";
+            }
+            if (isIe10) {
+                browser.version = "IE10";
+            }
+            if (isIe11) {
+                browser.version = "IE11";
+            }
+
+            return browser;
+
 
         }
 
