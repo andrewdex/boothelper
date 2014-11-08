@@ -46,3 +46,5 @@ body{margin-top: 50px;}
 .bgBlack:hover{background: #244162;}
 .bgBlack:focus{background: #244162;}
 .fontWhite{color:#ffffff;}
+.fontWhite:hover{color:#ffffff;}
+.fontWhite:focus{color:#ffffff;}
