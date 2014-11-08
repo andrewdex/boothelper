@@ -57,30 +57,30 @@
 
 
 <div class="docWrapper">
-    <div class="col-md-12">
-        <div class="col-md-2 addBorder margin-bottom-10">
-            <ul class="nav nav-pills nav-stacked" role="tablist">
-                <li role="presentation" class="active" id="ScrollAlert"><a href="#">Alert</a></li>
-                <li  id="ScrollConfirm" role="presentation"><a href="#">Confirm</a></li>
-                <li role="presentation"><a href="#">Messages</a></li>
-            </ul>
-        </div>
+<div class="col-md-12">
+<div class="col-md-2 addBorder margin-bottom-10">
+    <ul class="nav nav-pills nav-stacked" role="tablist">
+        <li role="presentation" class="active" id="ScrollAlert"><a href="#">Alert</a></li>
+        <li id="ScrollConfirm" role="presentation"><a href="#">Confirm</a></li>
+        <li role="presentation"><a href="#">Messages</a></li>
+    </ul>
+</div>
 
-        <div class="col-md-10">
+<div class="col-md-10">
 
-            <div class="col-md-12">
-                <div class="col-md-12">
-                    <div class="panel panel-primary" id="alertBody">
-                        <div class="panel-heading">
-                            <h3 class="panel-title"><strong>BootHelper Alert </strong>: Parametrized Dynamic Modal/Alert
-                                Dialog</h3>
-                        </div>
-                        <div class="panel-body">
+<div class="col-md-12">
+<div class="col-md-12">
+<div class="panel panel-primary" id="alertBody">
+    <div class="panel-heading">
+        <h3 class="panel-title"><strong>BootHelper Alert </strong>: Parametrized Dynamic Modal/Alert
+            Dialog</h3>
+    </div>
+    <div class="panel-body">
 
-                            <div>
+        <div>
 
 
-                                <strong> Sample Alert </strong>with tittle and message parameters.
+            <strong> Sample Alert </strong>with tittle and message parameters.
 
                             <pre class="brush :js">
 
@@ -91,15 +91,15 @@
 
 
                             </pre>
-                                <button class="btn btn-primary" id="sampleAlert">Sample Alert</button>
+            <button class="btn btn-primary" id="sampleAlert">Sample Alert</button>
 
 
-                            </div>
+        </div>
 
-                            <div class="margin-top-10">
+        <div class="margin-top-10">
 
 
-                                <strong> Sample Alert </strong>with backclick options.
+            <strong> Sample Alert </strong>with backclick options.
 
                             <pre class="brush :js">
 
@@ -111,17 +111,17 @@
 
 
                             </pre>
-                                <span>You can define if the Alert shoul closed with a backclick on the background or not. by default this is set to true</span>
+            <span>You can define if the Alert shoul closed with a backclick on the background or not. by default this is set to true</span>
 
-                                <button class="btn btn-primary" id="AlertBackclick">Alert backclick</button>
-
-
-                            </div>
-
-                            <div class="margin-top-10">
+            <button class="btn btn-primary" id="AlertBackclick">Alert backclick</button>
 
 
-                                <strong> Sample Alert </strong>with type option parameters.
+        </div>
+
+        <div class="margin-top-10">
+
+
+            <strong> Sample Alert </strong>with type option parameters.
 
                             <pre class="brush :js">
 
@@ -133,9 +133,9 @@
 
 
                             </pre>
-                                <span>This will pops up an alert with bootstrap default greenify alert style</span>
+            <span>This will pops up an alert with bootstrap default greenify alert style</span>
 
-                                <button class="btn btn-success" id="AlertSuccess">Alert Success</button>
+            <button class="btn btn-success" id="AlertSuccess">Alert Success</button>
 
 
                                             <pre class="brush :js">
@@ -148,9 +148,9 @@
 
 
                             </pre>
-                                <span>This will pops up an alert with bootstrap default yellow color alert style</span>
+            <span>This will pops up an alert with bootstrap default yellow color alert style</span>
 
-                                <button class="btn btn-warning" id="AlertWarning">Alert Warning</button>
+            <button class="btn btn-warning" id="AlertWarning">Alert Warning</button>
 
                                 <pre class="brush :js">
 
@@ -162,9 +162,9 @@
 
 
                             </pre>
-                                <span>This will pops up an alert with bootstrap default info color alert style</span>
+            <span>This will pops up an alert with bootstrap default info color alert style</span>
 
-                                <button class="btn btn-info" id="AlertInfo">Alert Info</button>
+            <button class="btn btn-info" id="AlertInfo">Alert Info</button>
 
 
 
@@ -178,63 +178,154 @@
 
 
                             </pre>
-                                <span>This will pops up an alert with bootstrap default error color alert style</span>
+            <span>This will pops up an alert with bootstrap default error color alert style</span>
 
-                                <button class="btn btn-danger" id="AlertError">Alert Error</button>
-
-
-                            </div>
+            <button class="btn btn-danger" id="AlertError">Alert Error</button>
 
 
-                        </div>
-                    </div>
-
-                    <div class="panel panel-primary" id="confirmBody">
-                        <div class="panel-heading">
-                            <h3 class="panel-title"><strong>BootHelper Confirm </strong>: Parametrized Dynamic
-                                Modal/Confirm
-                                Dialog</h3>
-                        </div>
-                        <div class="panel-body">
+        </div>
 
 
-                        </div>
-                    </div>
-                    <div class="well">
+    </div>
+</div>
 
-                        <div class="" id="heading">
-                            <img src="images/boothelper.png">
+<div class="panel panel-primary" id="confirmBody">
+    <div class="panel-heading">
+        <h3 class="panel-title"><strong>BootHelper Confirm </strong>: Parametrized Dynamic
+            Modal/Confirm with Result Callbacks
+        </h3>
+    </div>
+    <div class="panel-body">
 
-                            <h1>BootHelper v1.0</h1>
-                            <h4>Bootstrap Based Helper FrontEnd Framework</h4>
+        <div>
 
-                            <p>tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
 
-                        </div>
+            <strong> Sample Confirm</strong> with tittle and message parameters. And true/false result callback
+            function.
 
-                    </div>
+                            <pre class="brush :js">
 
-                </div>
+                                <!--Simple Confirm-->
+                                boot.Confirm("I am the Confirm","bootHelper Alert",function(result){
+                                    if(result){
+                                       boot.Alert("You Have Clicked Yes","BootHelper Confirm");
+                                    }else{
+                                        boot.Alert("You Have Clicked No","BootHelper Confirm");
 
-                <div class="col-md-12">
-                    <div id="first" class="">
+                                    }
+                                });
 
-                        <div class="well">
 
-                            <h3> Test</h3>
 
-                        </div>
 
-                    </div>
+                            </pre>
+            <button class="btn btn-primary" id="sampleConfirm">Sample Confirm</button>
 
-                </div>
 
-            </div>
+        </div>
+
+        <div class="margin-top-10">
+
+
+            <strong> Sample Confirm Option Parameter : </strong> with tittle and message parameters. And true/false
+            result callback functions with option parameters.
+
+                            <pre class="brush :js">
+
+                                <!--Simple Confirm with options-->
+                                boot.Confirm("I am the Confirm","bootHelper Alert",function(result){
+                                    if(result){
+                                       boot.Alert("You Have Clicked Yes","BootHelper Confirm");
+                                    }else{
+                                        boot.Alert("You Have Clicked No","BootHelper Confirm");
+                                    }
+                                },
+                                {
+
+                                backclick:false
+                                }
+                                );
+
+
+
+
+                            </pre>
+            <button class="btn btn-primary" id="ConfirmOptions">Sample Confirm with Options</button>
+
+
+        </div>
+
+        <div class="margin-top-10">
+
+
+            <strong> Sample Nested Confirms : </strong> with tittle and message parameters. And true/false result
+            callback functions with option parameters.
+
+                            <pre class="brush :js">
+
+                                <!--Simple Confirm with options-->
+                                boot.Confirm("I am the Confirm","bootHelper Alert",function(result){
+                                    if(result){
+                                       <!--nested Confirm on yes click-->
+                                        boot.Confirm("I am the Nested Confirm","bootHelper Alert",function(results){
+                                                if(results){
+                                                    boot.Alert("You Have Clicked nested Yes","BootHelper Alert");
+                                                }else{
+                                                     boot.Alert("You Have Clicked nested No","BootHelper Alert");
+                                                }
+                                        });
+                                    }else{
+                                        boot.Alert("You Have Clicked No","BootHelper Confirm");
+                                    }
+                                },
+                                {
+
+                                backclick:false
+                                });
+
+                            </pre>
+            <button class="btn btn-warning" id="ConfirmNested">Nested Confirms</button>
 
 
         </div>
 
     </div>
+</div>
+<div class="well">
+
+    <div class="" id="heading">
+        <img src="images/boothelper.png">
+
+        <h1>BootHelper v1.0</h1>
+        <h4>Bootstrap Based Helper FrontEnd Framework</h4>
+
+        <p>tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+
+    </div>
+
+</div>
+
+</div>
+
+<div class="col-md-12">
+    <div id="first" class="">
+
+        <div class="well">
+
+            <h3> Test</h3>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
 
 
 </div>

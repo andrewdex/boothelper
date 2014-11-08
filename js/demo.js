@@ -75,6 +75,74 @@ $(function () {
 
     });
 
+    $("#sampleConfirm").click(function () {
+
+
+        <!--Simple Confirm-->
+        boot.Confirm("I am the Confirm","bootHelper Alert",function(result){
+            if(result){
+                boot.Alert("You Have Clicked Yes","BootHelper Confirm");
+            }else{
+                boot.Alert("You Have Clicked No","BootHelper Confirm");
+
+            }
+        });
+
+
+    });
+
+    $("#ConfirmOptions").click(function () {
+
+
+        <!--Simple Confirm with options-->
+        boot.Confirm("I am the Confirm","bootHelper Alert",function(result){
+                if(result){
+                    boot.Alert("You Have Clicked Yes","BootHelper Confirm");
+                }else{
+                    boot.Alert("You Have Clicked No","BootHelper Confirm");
+                }
+            },
+            {
+
+                backclick:false
+            }
+        );
+
+
+
+
+    });
+
+
+    $("#ConfirmNested").click(function () {
+
+
+
+        <!--Simple Confirm with options-->
+        boot.Confirm("I am the Confirm","bootHelper Alert",function(result){
+                if(result){
+                    <!--nested Confirm on yes click-->
+                    boot.Confirm("I am the Nested Confirm","bootHelper Alert",function(results){
+                        if(results){
+                            boot.Alert("You Have Clicked nested Yes","BootHelper Alert");
+                        }else{
+                            boot.Alert("You Have Clicked nested No","BootHelper Alert");
+                        }
+                    });
+                }else{
+                    boot.Alert("You Have Clicked No","BootHelper Confirm");
+                }
+            },
+            {
+
+                backclick:false
+            });
+
+
+
+    });
+
+
 
 
     /*Scroll Navigation*/

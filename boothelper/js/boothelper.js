@@ -165,7 +165,7 @@
             htmlmodal += "<div class='modal-dialog'>";
             htmlmodal += "<div class='modal-content'>";
             htmlmodal += "<div class='modal-header'>";
-            htmlmodal += "<span  data-dismiss='modal' aria-hidden='true'><span class='ty-close close' title='Close'></span></span>";
+            htmlmodal += "<button data-dismiss='modal' type='button' class='close'><span title='Close' class='glyphicon glyphicon-remove-circle' aria-hidden='true'></span></button>";
             htmlmodal += "<h4 class='ty-page-heading'>" + tittlecontent + "</h4></div>";
             htmlmodal += "<div class='modal-body ty-font-normal'><p>" + bodycontent + "</p></div>";
             htmlmodal += "<div class='modal-footer'><button type='button' class='btn btn-primary modal-confirm-yes' data-dismiss='modal' aria-hidden='true'>Yes</button><button type='button' class='btn btn-primary modal-confirm-no' data-dismiss='modal' aria-hidden='true'>No</button></div>";
