@@ -116,8 +116,6 @@ $(function () {
 
     $("#ConfirmNested").click(function () {
 
-
-
         <!--Simple Confirm with options-->
         boot.Confirm("I am the Confirm","bootHelper Alert",function(result){
                 if(result){

@@ -18,12 +18,15 @@ body{margin-top: 50px;}
 
 
 /*Add Border*/
-.addBorder{
+.LeftSideBar{
     border-style: solid;
     border-width: 1px;
     border-radius: 4px;
     padding: 10px;
     border-color: rgb(231, 231, 231);
+    display: block;
+    position: fixed;
+    width: 18%;
 }
 
 .bh-docs-masthead, .bh-docs-masthead {
@@ -55,5 +58,7 @@ body{margin-top: 50px;}
 
 @media(max-width: 768px) {
     .nav .nav-pills .nav-stacked{max-width: 100% !important;}
+    
+    .LeftSideBar{position: inherit;width:100%;}
 
 }
