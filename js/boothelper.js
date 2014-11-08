@@ -31,7 +31,7 @@
         },
 
         /*Components*/
-        /*Parametrized Alerts - Bootstrap Based */
+        /*Parametrized Alert */
         Alert: function (msg, tittle, options) {
             "use strict";
 
@@ -137,6 +137,103 @@
                 $(this).remove();
             });
 
+
+        },
+        /*Parametrized Confirm Dialog*/
+        Confirm: function (msg, tittle, callback, options) {
+            "use strict";
+
+            var htmlmodal, modal, bodycontent = "Default Modal Body Content",
+                tittlecontent = "Sample PopUp Alert Title",
+                result;
+
+            //modal = $(".modal-confirm-alert");
+
+            if (msg !== undefined && msg !== "") {
+
+                bodycontent = msg;
+            }
+
+            if (tittle !== undefined && tittle !== "") {
+
+                tittlecontent = tittle;
+            }
+
+            htmlmodal = "<div class='modal fade modal-confirm-alert'>";
+            htmlmodal += "<div class='modal-dialog'>";
+            htmlmodal += "<div class='modal-content'>";
+            htmlmodal += "<div class='modal-header'>";
+            htmlmodal += "<span  data-dismiss='modal' aria-hidden='true'><span class='ty-close close' title='Close'></span></span>";
+            htmlmodal += "<h4 class='ty-page-heading'>" + tittlecontent + "</h4></div>";
+            htmlmodal += "<div class='modal-body ty-font-normal'><p>" + bodycontent + "</p></div>";
+            htmlmodal += "<div class='modal-footer'><button type='button' class='btn btn-primary modal-confirm-yes' data-dismiss='modal' aria-hidden='true'>Yes</button><button type='button' class='btn btn-primary modal-confirm-no' data-dismiss='modal' aria-hidden='true'>No</button></div>";
+            htmlmodal += "</div>";
+            htmlmodal += "</div>";
+            htmlmodal += "</div>";
+            $(document.body).append(htmlmodal);
+
+            try {
+
+
+                if (options === undefined || options.backclick === undefined) {
+                    $(".modal-confirm-alert").modal();
+                } else {
+
+                    if (options.backclick === true) {
+                        $(".modal-confirm-alert").modal();
+
+                    }
+
+                    if (options.backclick === false) {
+                        $(".modal-confirm-alert").modal({
+                            backdrop: "static",
+                            keyboard: false
+                        });
+
+                    }
+
+                }
+
+
+            } catch (e) {
+
+                console.log("BootHelper : Confirm " + e);
+
+            }
+
+
+            $(".modal-confirm-yes").click(function () {
+
+                result = true;
+                if (callback !== undefined && callback !== "") {
+                    callback(result);
+                }
+                if (callback === "" || callback === undefined) {
+                    console.log("BootHelper : Confirm :: Callback for YES has not defined ");
+                }
+
+
+            });
+
+
+            $(".modal-confirm-no").click(function () {
+                result = false;
+                if (callback !== undefined && callback !== "") {
+                    callback(result);
+                }
+                if (callback === "" || callback === undefined) {
+
+                    console.log("BootHelper : Confirm :: Callback for NO has not defined ");
+
+                }
+
+
+            });
+
+            $(".modal-confirm-alert").on('hidden.bs.modal', function () {
+                //Modal Close Event Fired !
+                $(this).remove();
+            });
 
         }
 
