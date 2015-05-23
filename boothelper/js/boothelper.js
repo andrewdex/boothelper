@@ -431,7 +431,7 @@
                 $(".dLoader").remove();
                 $(".dLoader-loading").remove();
                 $(".dLoader-text").remove();
-
+                $("body").css("overflow","auto");
             };
 
             return{
